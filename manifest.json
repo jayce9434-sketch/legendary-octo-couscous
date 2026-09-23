@@ -1,0 +1,15 @@
+{
+  "name": "Chordlings: Island Orchestra",
+  "short_name": "Chordlings",
+  "description": "Breed original musical creatures and build four living island orchestras.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#101827",
+  "theme_color": "#152032",
+  "icons": [
+    {"src":"icon.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
+  ]
+}

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no" />
+  <meta name="theme-color" content="#152032" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Chordlings" />
+  <title>Chordlings: Island Orchestra</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="boot" class="boot">
+    <img src="icon.png" alt="Chordlings icon" class="bootIcon" />
+    <h1>Chordlings</h1>
+    <p>Island Orchestra</p>
+    <button id="startBtn">Play</button>
+  </div>
+
+  <div id="app" class="app hidden">
+    <header class="topbar">
+      <div class="brand"><img src="icon.png" alt="" /><div><b>Chordlings</b><small id="islandLabel">Verdant Isle</small></div></div>
+      <div class="wallet">
+        <span>🪙 <b id="coins">0</b></span>
+        <span>💎 <b id="gems">0</b></span>
+        <span>⭐ <b id="stars">0</b></span>
+      </div>
+      <button id="giftBtn" class="round" aria-label="Daily gift">🎁</button>
+      <button id="settingsBtn" class="round">⚙️</button>
+    </header>
+
+    <main>
+      <section id="islandScene" class="scene" aria-label="Island">
+        <div id="skyFX" class="skyFX"></div>
+        <div id="monsterLayer" class="monsterLayer"></div>
+        <div class="stage">
+          <button id="nurseryBtn" class="building nursery"><span>🥚</span><b>Nursery</b><small id="nurseryText">Empty</small></button>
+          <button id="breederBtn" class="building breeder"><span>💞</span><b>Harmony Hut</b><small id="breederText">Ready</small></button>
+          <button id="marketBtn" class="building market"><span>🛍️</span><b>Market</b></button>
+        </div>
+      </section>
+
+      <nav class="bottomNav">
+        <button data-panel="islands">🏝️<span>Islands</span></button>
+        <button data-panel="book">📖<span>Book</span></button>
+        <button data-panel="breed">🧬<span>Breed</span></button>
+        <button data-panel="quests">📜<span>Quests</span></button>
+        <button data-panel="games">🎮<span>Games</span></button>
+      </nav>
+    </main>
+  </div>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modalCard">
+      <button id="closeModal" class="close">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="game.js"></script>
+</body>
+</html>
